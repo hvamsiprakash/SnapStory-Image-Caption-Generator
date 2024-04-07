@@ -81,11 +81,11 @@ if uploaded_image is not None:
 
         # Remove startseq and endseq
         generated_caption = generated_caption.replace("startseq", "").replace("endseq", "")
-
+        
 # Display the generated caption with custom styling
 st.write(
-    f"**Generated Caption:** *{generated_caption}*",
-    unsafe_allow_html=True
+    f"**Generated Caption:** *{generated_caption}*"
 )
+
 
 
