@@ -83,9 +83,9 @@ if uploaded_image is not None:
         generated_caption = generated_caption.replace("startseq", "").replace("endseq", "")
         
 # Display the generated caption with custom styling
-st.write(
-    f"**Generated Caption:** *{generated_caption}*"
+st.markdown(
+    f'<div style="background-color: #f0f0f0; border-radius: 10px; padding: 10px; margin-top: 20px;">'
+    f'<p style="font-family: Arial, sans-serif; font-size: 16px; font-style: italic; color: #333;">{generated_caption}</p>'
+    f'</div>'
 )
-
-
 
