@@ -19,7 +19,7 @@ with open('tokenizer.pkl', 'rb') as tokenizer_file:
     tokenizer = pickle.load(tokenizer_file)
     
 # Set custom web page title
-st.set_page_config(page_title="AI Image Caption Generator", page_icon=None)
+st.set_page_config(page_title="SnapStory: Image Caption Generator", page_icon=None)
 
 # Sidebar
 st.sidebar.title("About")
