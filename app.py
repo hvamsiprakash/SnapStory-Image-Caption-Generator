@@ -19,13 +19,19 @@ with open('tokenizer.pkl', 'rb') as tokenizer_file:
     tokenizer = pickle.load(tokenizer_file)
     
 # Set custom web page title
-st.set_page_config(page_title="Caption Generator App", page_icon="📷")
+st.set_page_config(page_title="AI Image Caption Generator", page_icon=None)
 
-# Streamlit app
-st.title("Image Caption Generator")
-st.markdown(
-    "Upload an image, and this app will generate a caption for it using a trained LSTM model."
+# Sidebar
+st.sidebar.title("About")
+st.sidebar.info(
+    "This web app generates captions for images using a trained LSTM model. "
+    "The model was trained on the Flickr8k dataset, which contains over 8,000 images "
+    "each paired with 5 different captions describing the image. "
+    "The LSTM model takes image features extracted by the MobileNetV2 model and generates a caption for the image."
 )
+
+# Main interface
+st.title("AI Image Caption Generator")
 
 # Upload image
 uploaded_image = st.file_uploader("Choose an image", type=["jpg", "jpeg", "png"])
@@ -54,7 +60,7 @@ if uploaded_image is not None:
         def get_word_from_index(index, tokenizer):
             return next(
                 (word for word, idx in tokenizer.word_index.items() if idx == index), None
-        )
+            )
 
         # Generate caption using the model
         def predict_caption(model, image_features, tokenizer, max_caption_length):
@@ -76,10 +82,10 @@ if uploaded_image is not None:
         # Remove startseq and endseq
         generated_caption = generated_caption.replace("startseq", "").replace("endseq", "")
 
-    # Display the generated caption with custom styling
-    st.markdown(
-        f'<div style="border-left: 6px solid #ccc; padding: 5px 20px; margin-top: 20px;">'
-        f'<p style="font-style: italic;">“{generated_caption}”</p>'
-        f'</div>',
-        unsafe_allow_html=True
-    )
+# Display the generated caption with custom styling
+st.write(
+    f"**Generated Caption:** *{generated_caption}*",
+    unsafe_allow_html=True
+)
+
+
