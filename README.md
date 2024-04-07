@@ -25,4 +25,4 @@ The model is trained on the Flickr8k dataset, available on [Kaggle](https://www.
 
 ## Try it Out! 🎉
 
-Experience SnapStory in action by visiting the [SnapStory Web App](https://image-captioning-kfzycvw
+Experience SnapStory in action by visiting the [SnapStory Web App](https://image-captioning-kfzycvwflqjwyuiplgylnh.streamlit.app/)
