@@ -24,11 +24,17 @@ st.set_page_config(page_title="SnapStory: Image Caption Generator", page_icon=No
 # Sidebar
 st.sidebar.title("About")
 st.sidebar.info(
-    "This web app generates captions for images using a trained LSTM model. "
-    "The model was trained on the Flickr8k dataset, which contains over 8,000 images "
-    "each paired with 5 different captions describing the image. "
-    "The LSTM model takes image features extracted by the MobileNetV2 model and generates a caption for the image."
+    """
+    📚 **Flickr Dataset:**
+    [Flickr Image Dataset](https://www.kaggle.com/datasets/hsankesara/flickr-image-dataset)
+
+    This web app generates captions for images using a trained LSTM model. 
+    The model was trained on the Flickr8k dataset, which contains over 8,000 images 
+    each paired with 5 different captions describing the image. 
+    The LSTM model takes image features extracted by the MobileNetV2 model and generates a caption for the image.
+    """
 )
+
 
 # Main interface
 st.title("SnapStory: Image Caption Generator")
