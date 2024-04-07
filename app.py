@@ -35,7 +35,7 @@ st.title("SnapStory: Image Caption Generator")
 # Description of the AI Image Caption Generator app
 st.warning(
     """
-    🚀 Welcome to the AI Image Caption Generator! This project utilizes the Flickr dataset, 
+    🚀 Welcome to the Image Caption Generator! This project utilizes the Flickr dataset, 
     where each image is paired with five captions. Our model effectively generates a unique caption 
     for the uploaded image. However, it may occasionally produce inaccurate results for new or 
     uncommon images. Let's explore the fascinating world of image captioning together! 🎨📷
