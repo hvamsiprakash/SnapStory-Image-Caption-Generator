@@ -81,12 +81,11 @@ if uploaded_image is not None:
 
         # Remove startseq and endseq
         generated_caption = generated_caption.replace("startseq", "").replace("endseq", "")
-        
-# Display the generated caption with custom styling
-st.markdown(
-    f'<div style="background-color: #f0f0f0; border-radius: 10px; padding: 10px; margin-top: 20px;">'
-    f'<p style="font-family: Arial, sans-serif; font-size: 16px; font-style: italic; color: #333;">{generated_caption}</p>'
-    f'</div>'
-)
 
-
+    # Display the generated caption with custom styling
+    st.markdown(
+        f'<div style="border-left: 6px solid #ccc; padding: 5px 20px; margin-top: 20px;">'
+        f'<p style="font-style: italic;">“{generated_caption}”</p>'
+        f'</div>',
+        unsafe_allow_html=True
+    )
