@@ -37,8 +37,7 @@ st.sidebar.info(
 
 
 # Main interface
-st.title("Image Captioning with Transformer-Based Multi-Modal Attention
-")
+st.title("Image Captioning with Transformer-Based Multi-Modal Attention")
 # Description of the AI Image Caption Generator app
 st.info(
     """
