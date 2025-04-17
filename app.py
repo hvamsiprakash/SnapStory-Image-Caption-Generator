@@ -41,20 +41,15 @@ st.title("Image Captioning with Transformer-Based Multi-Modal Attention")
 # Description of the AI Image Caption Generator app
 st.info(
     """
-    🔍 This transformer-based model combines EfficientNet visual features with multi-head attention
-    to generate accurate image captions. Trained on the Flickr30K dataset, it uses:
+    This advanced caption generator was trained on thousands of 
+    images from the Flickr dataset, learning to describe visual content in natural language. 
     
-    - EfficientNetB0 for image feature extraction
-    - Transformer encoder-decoder architecture
-    - Positional embeddings and masked attention
-    - Multi-modal cross-attention between vision and language
-    
-    The model achieves strong BLEU scores through careful training with:
-    - Custom learning rate scheduling
-    - Image augmentation
-    - Sequence-to-sequence attention mechanisms
+    While it excels at common scenes, you might encounter creative interpretations for 
+    unconventional images - that's part of the AI's learning journey! Try uploading different 
+    photos to see how it responds.
     """
 )
+
 
 
 
