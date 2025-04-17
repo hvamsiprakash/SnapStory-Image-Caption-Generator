@@ -37,16 +37,26 @@ st.sidebar.info(
 
 
 # Main interface
-st.title("SnapStory: Image Caption Generator")
+st.title("Image Captioning with Transformer-Based Multi-Modal Attention
+")
 # Description of the AI Image Caption Generator app
-st.warning(
+st.info(
     """
-    🚀 Welcome to the Image Caption Generator! This project utilizes the Flickr dataset, 
-    where each image is paired with five captions. Our model effectively generates a unique caption 
-    for the uploaded image. However, it may occasionally produce inaccurate results for new or 
-    uncommon images. Let's explore the fascinating world of image captioning together! 🎨📷
+    🔍 This transformer-based model combines EfficientNet visual features with multi-head attention
+    to generate accurate image captions. Trained on the Flickr30K dataset, it uses:
+    
+    - EfficientNetB0 for image feature extraction
+    - Transformer encoder-decoder architecture
+    - Positional embeddings and masked attention
+    - Multi-modal cross-attention between vision and language
+    
+    The model achieves strong BLEU scores through careful training with:
+    - Custom learning rate scheduling
+    - Image augmentation
+    - Sequence-to-sequence attention mechanisms
     """
 )
+
 
 
 
